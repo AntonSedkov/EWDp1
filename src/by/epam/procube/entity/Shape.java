@@ -1,22 +1,25 @@
 package by.epam.procube.entity;
 
+import by.epam.procube.util.IdGenerator;
+
 public class Shape {
 
-    private int id;
+    private long shapeId;
 
     public Shape() {
+        shapeId = IdGenerator.generateId();
     }
 
-    public Shape(int id) {
-        this.id = id;
+    public Shape(long shapeId) {
+        this.shapeId = shapeId;
     }
 
-    public int getId() {
-        return id;
+    public long getId() {
+        return shapeId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(long shapeId) {
+        this.shapeId = shapeId;
     }
 
 }

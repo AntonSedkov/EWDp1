@@ -9,7 +9,7 @@ public class CubeFactory extends AbstractShapeFactory<Cube> {
     @Override
     public Cube createInstance(String[] lines) {
         Cube cube = null;
-        if (lines.length == QUANTITY_PARAMETERS) {
+        if (lines != null && lines.length == QUANTITY_PARAMETERS) {
             cube = new Cube(Double.parseDouble(lines[0]),
                     new Point(Double.parseDouble(lines[1]), Double.parseDouble(lines[2]), Double.parseDouble(lines[3])));
         }

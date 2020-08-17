@@ -17,11 +17,10 @@ public class CubeDataReader {
     public static List<String> readLinesFile(String pathToFile) throws CubeException {
         try (Stream<String> lineStream = Files.lines(Paths.get(pathToFile))) {
             List<String> lines = lineStream.filter(IncomingDataValidator::isGoodLineForCube).collect(Collectors.toList());
-            logger.info("Data has read successfully");
+            logger.info("Data has read successfully. Good lines: " + lines.size());
             return lines;
         } catch (IOException e) {
-            logger.error("Data has not read");
-            throw new CubeException("Path is wrong", e);
+            throw new CubeException("Data has not read. Wrong path: " + pathToFile, e);
         }
     }
 

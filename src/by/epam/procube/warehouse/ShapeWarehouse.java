@@ -1,16 +1,13 @@
 package by.epam.procube.warehouse;
 
+import by.epam.procube.entity.CountedValuesCube;
+
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
 public class ShapeWarehouse {
-
-    private static final Double DEFAULT_VALUE = -1.0;
-    private Map<Integer, Double> surfaces;
-    private Map<Integer, Double> volumes;
-    private Map<Integer, Double> figureDiagonals;
-    private Map<Integer, Double> facetDiagonals;
+    private Map<Long, CountedValuesCube> countedValuesCube;
     private static ShapeWarehouse instance;
 
     private ShapeWarehouse() {
@@ -23,64 +20,23 @@ public class ShapeWarehouse {
         return instance;
     }
 
-    public Map<Integer, Double> getSurfaces() {
-        return Collections.unmodifiableMap(surfaces);
+    public Map<Long, CountedValuesCube> getSurfaces() {
+        return Collections.unmodifiableMap(countedValuesCube);
     }
 
-    public Double getSurfaceElement(Integer keyId) {
-        return surfaces.getOrDefault(keyId, DEFAULT_VALUE);
-    }
-
-    public void setSurfaceElement(Integer id, Double result) {
-        if (surfaces == null) {
-            surfaces = new HashMap<>();
+    public CountedValuesCube getSurfaceElement(Long keyId) {
+        CountedValuesCube result = new CountedValuesCube();
+        if (countedValuesCube.containsKey(keyId)) {
+            result = countedValuesCube.get(keyId);
         }
-        surfaces.put(id, result);
+        return result;
     }
 
-    public Map<Integer, Double> getVolumes() {
-        return Collections.unmodifiableMap(volumes);
-    }
-
-    public Double getVolumeElement(Integer keyId) {
-        return volumes.getOrDefault(keyId, DEFAULT_VALUE);
-    }
-
-    public void setVolumeElement(Integer id, Double result) {
-        if (volumes == null) {
-            volumes = new HashMap<>();
+    public void setSurfaceElement(Long id, CountedValuesCube valuesCube) {
+        if (countedValuesCube == null) {
+            countedValuesCube = new HashMap<>();
         }
-        volumes.put(id, result);
-    }
-
-    public Map<Integer, Double> getFigureDiagonals() {
-        return Collections.unmodifiableMap(figureDiagonals);
-    }
-
-    public Double getFigureDiagonalElement(Integer keyId) {
-        return figureDiagonals.getOrDefault(keyId, DEFAULT_VALUE);
-    }
-
-    public void setFigureDiagonalElement(Integer id, Double result) {
-        if (figureDiagonals == null) {
-            figureDiagonals = new HashMap<>();
-        }
-        figureDiagonals.put(id, result);
-    }
-
-    public Map<Integer, Double> getFacetDiagonals() {
-        return Collections.unmodifiableMap(facetDiagonals);
-    }
-
-    public Double getFacetDiagonalElement(Integer keyId) {
-        return facetDiagonals.getOrDefault(keyId, DEFAULT_VALUE);
-    }
-
-    public void setFacetDiagonalsElement(Integer id, Double result) {
-        if (facetDiagonals == null) {
-            facetDiagonals = new HashMap<>();
-        }
-        facetDiagonals.put(id, result);
+        countedValuesCube.put(id, valuesCube);
     }
 
 }

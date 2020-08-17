@@ -11,7 +11,15 @@
         </layout>
     </appender>
 
-    <logger name="by.epam.bookstore">
+    <appender name="ConsoleAppender" class="org.apache.log4j.ConsoleAppender">
+        <param name="Encoding" value="UTF-8"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+                   value="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %c{1}:%L - %m%n"/>
+        </layout>
+    </appender>
+
+    <logger name="by.epam.procube">
         <level value="INFO"/>
     </logger>
 

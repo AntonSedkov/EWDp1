@@ -2,10 +2,10 @@ package by.epam.procube.validator;
 
 import by.epam.procube.entity.Point;
 
-import java.util.Set;
+import java.util.List;
 
 public class ShapeValidator {
-
+    // TODO: 17.08.2020
     private static final double INACCURACY = 0.00001;
 
     public static boolean isPlane(Point a, Point b, Point c) {
@@ -26,7 +26,7 @@ public class ShapeValidator {
     }
 
 
-    public static boolean isCube(Set<Point> vertexes) {
+    public static boolean isCube(List<Point> vertexes) {
 
         return false;
     }
