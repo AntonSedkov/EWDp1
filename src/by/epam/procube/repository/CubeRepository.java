@@ -3,6 +3,8 @@ package by.epam.procube.repository;
 import by.epam.procube.comparator.CubeComparator;
 import by.epam.procube.entity.Cube;
 import by.epam.procube.specification.Specification;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,8 +14,10 @@ import java.util.stream.Collectors;
 public class CubeRepository {
     private List<Cube> cubes;
     private static CubeRepository instance;
+    private static Logger logger = LogManager.getLogger(CubeRepository.class);
 
     private CubeRepository() {
+        cubes = new ArrayList<>();
     }
 
     public static CubeRepository getInstance() {
@@ -28,7 +32,11 @@ public class CubeRepository {
     }
 
     public void setCubes(List<Cube> cubes) {
-        this.cubes = cubes;
+        if (cubes != null) {
+            this.cubes = cubes;
+        } else {
+            logger.error("Input parameter is null.");
+        }
     }
 
     public List<Cube> query(Specification spec) {
@@ -41,6 +49,7 @@ public class CubeRepository {
         if (cube != null) {
             cubes.add(cube);
             result = true;
+            logger.info("Cube has been added to repository.");
         }
         return result;
     }
@@ -50,6 +59,7 @@ public class CubeRepository {
         if (cubes.contains(cube)) {
             cubes.remove(cube);
             result = true;
+            logger.info("Cube has been removed from repository.");
         }
         return result;
     }
@@ -60,6 +70,7 @@ public class CubeRepository {
             if (cube.getId() == cubeId) {
                 cubes.remove(cube);
                 result = true;
+                logger.info("Cube has been removed from repository by id.");
             }
         }
         return result;

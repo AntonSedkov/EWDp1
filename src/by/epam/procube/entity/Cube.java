@@ -5,6 +5,8 @@ import by.epam.procube.observer.Observable;
 import by.epam.procube.observer.Observer;
 import by.epam.procube.observer.impl.CubeObserverEdge;
 import by.epam.procube.observer.impl.CubeObserverPoint;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,15 +24,18 @@ public class Cube extends Shape implements Observable {
     private double edge;
     private Point startPoint;
     private List<Observer> observers = new ArrayList<>();
+    private static Logger logger = LogManager.getLogger(Cube.class);
 
     public Cube() {
         super();
+        logger.info("Empty Cube was created.");
     }
 
     public Cube(double edge, Point startPoint) {
         super();
         this.edge = edge;
         this.startPoint = startPoint;
+        logger.info("Cube was fully created.");
     }
 
     public double getEdge() {
@@ -56,7 +61,7 @@ public class Cube extends Shape implements Observable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Cube cube = (Cube) o;
-        if (cube.getId() != this.getId()) return false;
+        if (!super.equals(o)) return false;
         if (Double.compare(cube.edge, edge) != 0) return false;
         return startPoint != null ? startPoint.equals(cube.startPoint) : cube.startPoint == null;
     }
@@ -100,6 +105,10 @@ public class Cube extends Shape implements Observable {
     @Override
     public void notifyObservers() {
         observers.forEach(observer -> observer.actionPerformer(new CubeEvent(this)));
+    }
+
+    public void detachAllObservers() {
+        observers.forEach(observer -> detach(observer));
     }
 
     private void launchObserver(Observer cubeObserver) {

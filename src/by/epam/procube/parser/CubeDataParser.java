@@ -1,26 +1,27 @@
 package by.epam.procube.parser;
 
-import by.epam.procube.entity.Cube;
-import by.epam.procube.factory.AbstractShapeFactory;
-import by.epam.procube.factory.CubeFactory;
-import org.apache.log4j.Logger;
+import by.epam.procube.validator.IncomingDataValidator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-
+import java.util.stream.Collectors;
 
 public class CubeDataParser {
-    private static Logger logger = Logger.getLogger(CubeDataParser.class);
+    private static Logger logger = LogManager.getLogger(CubeDataParser.class);
     private static final String SPLITTER = "\\s+";
 
-    public List<Cube> parseCubes(List<String> data) {
-        List<Cube> cubes = new ArrayList<>();
-        for (String line : data) {
+    public List<List<String>> parseCubes(List<String> data) {
+        List<String> goodLines = data.stream().filter(IncomingDataValidator::isGoodLineForCube).collect(Collectors.toList());
+        logger.info("Quantity of good cube lines: " + goodLines.size());
+        List<List<String>> cubes = new ArrayList<>();
+        for (String line : goodLines) {
             String[] params = line.split(SPLITTER);
-            AbstractShapeFactory<Cube> factory = new CubeFactory();
-            cubes.add(factory.createInstance(params));
+            cubes.add(Arrays.asList(params));
         }
-        logger.info("Cubes created successfully. Quantity cubes: " + cubes.size());
+        logger.info("Data has successfully parsed for cubes.");
         return cubes;
     }
 

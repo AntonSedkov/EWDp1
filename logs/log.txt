@@ -92,3 +92,10 @@ java.nio.file.NoSuchFileException: src\resources\cubes.txt
 2020-08-16 15:07:02 [main] INFO  CubeDataParser:23 - Cubes created successfully. Quantity cubes: 3
 2020-08-16 15:07:02 [main] INFO  CubeDataParser:23 - Cubes created successfully. Quantity cubes: 3
 2020-08-16 15:07:02 [main] INFO  CubeDataParser:23 - Cubes created successfully. Quantity cubes: 6
+Data has read successfully. Good lines: 25
+Data has read successfully. Good lines: 25
+2020-08-20 00:27:48 [main] INFO  CubeDataReader:20 - Data has read successfully. Good lines: 25
+2020-08-20 01:02:31 [main] INFO  CubeDataParser:18 - Quantity of good cube lines: 2
+2020-08-20 01:02:31 [main] INFO  CubeDataParser:24 - Data has successfully parsed for cubes.
+2020-08-20 01:02:31 [main] INFO  CubeDataParser:18 - Quantity of good cube lines: 2
+2020-08-20 01:02:31 [main] INFO  CubeDataParser:24 - Data has successfully parsed for cubes.

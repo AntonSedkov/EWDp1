@@ -5,11 +5,23 @@ import by.epam.procube.entity.Point;
 import by.epam.procube.entity.Shape;
 import by.epam.procube.service.ShapeService;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
 public class CubeServiceImpl implements ShapeService {
+    private static CubeServiceImpl instance;
+
+    private CubeServiceImpl() {
+    }
+
+    public static CubeServiceImpl getInstance() {
+        if (instance == null) {
+            instance = new CubeServiceImpl();
+        }
+        return instance;
+    }
 
     @Override
     public double calculateSurfaceArea(Shape shape) {
@@ -58,48 +70,49 @@ public class CubeServiceImpl implements ShapeService {
     }
 
     public List<Point> calculateVertexPoints(Cube cube) {
-        Point[] vertexes = new Point[Cube.QUANTITY_VERTEXES];
-        vertexes[0] = cube.getStartPoint();
+        List<Point> vertexes = new ArrayList<>();
+        Point startPoint = cube.getStartPoint();
+        vertexes.add(startPoint);
         double edge = cube.getEdge();
-        for (int i = 1; i < vertexes.length; i++) {
-            Point pointNew = vertexes[0];
+        for (int i = 1; i < Cube.QUANTITY_VERTEXES; i++) {
+            Point newPoint = new Point(startPoint);
             switch (i) {
                 case 1:
-                    pointNew.setPointX(pointNew.getPointX() + edge);
-                    vertexes[i] = pointNew;
+                    newPoint.setPointX(newPoint.getPointX() + edge);
+                    vertexes.add(newPoint);
                     break;
                 case 2:
-                    pointNew.setPointY(pointNew.getPointY() + edge);
-                    vertexes[i] = pointNew;
+                    newPoint.setPointY(newPoint.getPointY() + edge);
+                    vertexes.add(newPoint);
                     break;
                 case 3:
-                    pointNew.setPointZ(pointNew.getPointZ() + edge);
-                    vertexes[i] = pointNew;
+                    newPoint.setPointZ(newPoint.getPointZ() + edge);
+                    vertexes.add(newPoint);
                     break;
                 case 4:
-                    pointNew.setPointX(pointNew.getPointX() + edge);
-                    pointNew.setPointY(pointNew.getPointY() + edge);
-                    vertexes[i] = pointNew;
+                    newPoint.setPointX(newPoint.getPointX() + edge);
+                    newPoint.setPointY(newPoint.getPointY() + edge);
+                    vertexes.add(newPoint);
                     break;
                 case 5:
-                    pointNew.setPointX(pointNew.getPointX() + edge);
-                    pointNew.setPointZ(pointNew.getPointZ() + edge);
-                    vertexes[i] = pointNew;
+                    newPoint.setPointX(newPoint.getPointX() + edge);
+                    newPoint.setPointZ(newPoint.getPointZ() + edge);
+                    vertexes.add(newPoint);
                     break;
                 case 6:
-                    pointNew.setPointY(pointNew.getPointY() + edge);
-                    pointNew.setPointZ(pointNew.getPointZ() + edge);
-                    vertexes[i] = pointNew;
+                    newPoint.setPointY(newPoint.getPointY() + edge);
+                    newPoint.setPointZ(newPoint.getPointZ() + edge);
+                    vertexes.add(newPoint);
                     break;
                 case 7:
-                    pointNew.setPointX(pointNew.getPointX() + edge);
-                    pointNew.setPointY(pointNew.getPointY() + edge);
-                    pointNew.setPointZ(pointNew.getPointZ() + edge);
-                    vertexes[i] = pointNew;
+                    newPoint.setPointX(newPoint.getPointX() + edge);
+                    newPoint.setPointY(newPoint.getPointY() + edge);
+                    newPoint.setPointZ(newPoint.getPointZ() + edge);
+                    vertexes.add(newPoint);
                     break;
             }
         }
-        return Arrays.asList(vertexes);
+        return vertexes;
     }
 
 }

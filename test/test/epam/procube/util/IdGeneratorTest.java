@@ -1,17 +1,15 @@
 package test.epam.procube.util;
 
 import by.epam.procube.util.IdGenerator;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 public class IdGeneratorTest {
 
     @BeforeMethod
-    public void setUp(){
+    public void setUp() {
         IdGenerator.setId(0);
     }
 
@@ -21,7 +19,7 @@ public class IdGeneratorTest {
         IdGenerator.generateId();
         long actual = IdGenerator.generateId();
         long expected = 3;
-        assertEquals(actual,expected);
+        assertEquals(actual, expected);
     }
 
     @Test
@@ -29,7 +27,7 @@ public class IdGeneratorTest {
         IdGenerator.setId(1_333_777_999);
         long actual = IdGenerator.generateId();
         long expected = 0;
-        assertEquals(actual,expected);
+        assertEquals(actual, expected);
     }
 
 }

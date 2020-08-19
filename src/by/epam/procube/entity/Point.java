@@ -10,6 +10,12 @@ public class Point {
     public Point() {
     }
 
+    public Point(Point point) {
+        pointX = point.getPointX();
+        pointY = point.getPointY();
+        pointZ = point.getPointZ();
+    }
+
     public Point(double pointX, double pointY, double pointZ) {
         this.pointX = pointX;
         this.pointY = pointY;
