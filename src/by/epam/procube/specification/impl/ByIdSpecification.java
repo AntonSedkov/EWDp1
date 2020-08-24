@@ -14,4 +14,5 @@ public class ByIdSpecification implements Specification {
     public boolean test(Cube cube) {
         return cube.getId() == id;
     }
+
 }

@@ -1,4 +1,6 @@
-package by.epam.procube.entity;
+package by.epam.procube.warehouse;
+
+import by.epam.procube.entity.CountedValuesCube;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -23,6 +25,13 @@ public class ShapeWarehouse {
         return Collections.unmodifiableMap(countedValuesCube);
     }
 
+    public void setCountedValuesCube(Map<Long, CountedValuesCube> countedValuesCube) {
+        if (countedValuesCube == null) {
+            countedValuesCube = new HashMap<>();
+        }
+        this.countedValuesCube = countedValuesCube;
+    }
+
     public CountedValuesCube getCubeValues(Long keyId) {
         CountedValuesCube result = new CountedValuesCube();
         if (countedValuesCube.containsKey(keyId)) {
@@ -32,10 +41,12 @@ public class ShapeWarehouse {
     }
 
     public void setCubeValues(Long id, CountedValuesCube valuesCube) {
-        if (countedValuesCube == null) {
-            countedValuesCube = new HashMap<>();
+        if (id > 0) {
+            if (valuesCube == null) {
+                valuesCube = new CountedValuesCube();
+            }
+            countedValuesCube.put(id, valuesCube);
         }
-        countedValuesCube.put(id, valuesCube);
     }
 
 }

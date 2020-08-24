@@ -3,8 +3,6 @@ package by.epam.procube.entity;
 import by.epam.procube.observer.CubeEvent;
 import by.epam.procube.observer.Observable;
 import by.epam.procube.observer.Observer;
-import by.epam.procube.observer.impl.CubeObserverEdge;
-import by.epam.procube.observer.impl.CubeObserverPoint;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -13,13 +11,13 @@ import java.util.List;
 import java.util.StringJoiner;
 
 public class Cube extends Shape implements Observable {
-
     public static final int MULTIPLIER_FOR_SURFACE_AREA = 6;
     public static final int DEGREE_FOR_SURFACE_AREA = 2;
     public static final int DEGREE_FOR_VOLUME = 3;
     public static final double MULTIPLIER_FOR_FIGURE_DIAGONAL = Math.sqrt(3);
     public static final double MULTIPLIER_FOR_FACET_DIAGONAL = Math.sqrt(2);
     public static final int QUANTITY_VERTEXES = 8;
+    public static final double PARALLEL_COORDINATE_PLANE_INDICATOR = 0.0;
 
     private double edge;
     private Point startPoint;
@@ -44,7 +42,7 @@ public class Cube extends Shape implements Observable {
 
     public void setEdge(double edge) {
         this.edge = edge;
-        launchObserver(new CubeObserverEdge());
+        notifyObservers();
     }
 
     public Point getStartPoint() {
@@ -53,7 +51,7 @@ public class Cube extends Shape implements Observable {
 
     public void setStartPoint(Point startPoint) {
         this.startPoint = startPoint;
-        launchObserver(new CubeObserverPoint());
+        notifyObservers();
     }
 
     @Override
@@ -107,13 +105,4 @@ public class Cube extends Shape implements Observable {
         observers.forEach(observer -> observer.actionPerformer(new CubeEvent(this)));
     }
 
-    public void detachAllObservers() {
-        observers.forEach(observer -> detach(observer));
-    }
-
-    private void launchObserver(Observer cubeObserver) {
-        attach(cubeObserver);
-        notifyObservers();
-        detach(cubeObserver);
-    }
 }

@@ -5,7 +5,6 @@ import by.epam.procube.util.IdGenerator;
 import java.util.StringJoiner;
 
 public class Shape {
-
     private long shapeId;
 
     public Shape() {
@@ -43,4 +42,5 @@ public class Shape {
                 .add("shapeId=" + shapeId)
                 .toString();
     }
+
 }

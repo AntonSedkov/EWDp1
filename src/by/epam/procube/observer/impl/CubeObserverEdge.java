@@ -5,7 +5,7 @@ import by.epam.procube.entity.Cube;
 import by.epam.procube.observer.CubeEvent;
 import by.epam.procube.observer.Observer;
 import by.epam.procube.service.impl.CubeServiceImpl;
-import by.epam.procube.entity.ShapeWarehouse;
+import by.epam.procube.warehouse.ShapeWarehouse;
 
 public class CubeObserverEdge implements Observer<CubeEvent> {
 
@@ -27,4 +27,5 @@ public class CubeObserverEdge implements Observer<CubeEvent> {
         valuesCube.setFigureDiagonal(figureDiagonal);
         ShapeWarehouse.getInstance().setCubeValues(id, valuesCube);
     }
+
 }

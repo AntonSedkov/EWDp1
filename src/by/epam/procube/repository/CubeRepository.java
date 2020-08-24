@@ -66,11 +66,14 @@ public class CubeRepository {
 
     public boolean removeCubeById(long cubeId) {
         boolean result = false;
-        for (Cube cube : cubes) {
-            if (cube.getId() == cubeId) {
-                cubes.remove(cube);
-                result = true;
-                logger.info("Cube has been removed from repository by id.");
+        if (cubeId > 0) {
+            for (Cube cube : cubes) {
+                if (cube.getId() == cubeId) {
+                    cubes.remove(cube);
+                    result = true;
+                    logger.info("Cube has been removed from repository by id.");
+                    break;
+                }
             }
         }
         return result;

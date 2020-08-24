@@ -9,4 +9,5 @@ public class CubeComparatorEdge implements CubeComparator {
     public int compare(Cube cubeOne, Cube cubeTwo) {
         return Double.compare(cubeOne.getEdge(), cubeTwo.getEdge());
     }
+
 }

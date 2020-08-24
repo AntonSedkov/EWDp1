@@ -5,19 +5,27 @@ import by.epam.procube.entity.Cube;
 import by.epam.procube.entity.Point;
 import by.epam.procube.observer.CubeEvent;
 import by.epam.procube.observer.impl.CubeObserverPoint;
-import by.epam.procube.entity.ShapeWarehouse;
+import by.epam.procube.util.IdGenerator;
+import by.epam.procube.warehouse.ShapeWarehouse;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import static org.testng.Assert.assertEquals;
 
 public class CubeObserverPointTest {
-
     CubeObserverPoint observerPoint;
     CubeEvent cubeEvent;
     CountedValuesCube valuesCube;
+
+    @BeforeMethod
+    public void setUp() {
+        IdGenerator.setId(0);
+        ShapeWarehouse.getInstance().setCountedValuesCube(new HashMap<>());
+    }
 
     @Test
     public void testActionPerformer() {
@@ -38,4 +46,5 @@ public class CubeObserverPointTest {
         CountedValuesCube actual = ShapeWarehouse.getInstance().getCubeValues(1l);
         assertEquals(actual, valuesCube);
     }
+
 }

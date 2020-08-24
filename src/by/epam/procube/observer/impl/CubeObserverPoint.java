@@ -6,11 +6,12 @@ import by.epam.procube.entity.Point;
 import by.epam.procube.observer.CubeEvent;
 import by.epam.procube.observer.Observer;
 import by.epam.procube.service.impl.CubeServiceImpl;
-import by.epam.procube.entity.ShapeWarehouse;
+import by.epam.procube.warehouse.ShapeWarehouse;
 
 import java.util.List;
 
 public class CubeObserverPoint implements Observer<CubeEvent> {
+
     @Override
     public void actionPerformer(CubeEvent cubeEvent) {
         Cube cube = cubeEvent.getSource();
@@ -23,4 +24,5 @@ public class CubeObserverPoint implements Observer<CubeEvent> {
         valuesCube.setVertexes(vertexes);
         ShapeWarehouse.getInstance().setCubeValues(id, valuesCube);
     }
+
 }

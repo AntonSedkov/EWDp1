@@ -11,7 +11,6 @@ import java.util.List;
 import static org.testng.Assert.assertEquals;
 
 public class CubeDataParserTest {
-
     CubeDataParser cubeParser;
 
     @BeforeMethod
@@ -20,8 +19,8 @@ public class CubeDataParserTest {
     }
 
     @Test(dataProvider = "dataForParser")
-    public void testParseCubes(List<String> incomingData, List<List<String>> expected) {
-        List<List<String>> actual = cubeParser.parseCubes(incomingData);
+    public void testParseCubes(List<String> incomingData, List<List<Double>> expected) {
+        List<List<Double>> actual = cubeParser.parseCubes(incomingData);
         assertEquals(actual, expected);
     }
 
@@ -39,22 +38,22 @@ public class CubeDataParserTest {
         stringsTwo.add("77.574          10.98  -20.45     30.223");
         stringsTwo.add("11     77ek ");
         stringsTwo.add("5 10 20 30");
-        List<String> stringOne = new ArrayList<>();
-        stringOne.add("5");
-        stringOne.add("10");
-        stringOne.add("20");
-        stringOne.add("30");
-        List<String> stringTwo = new ArrayList<>();
-        stringTwo.add("77.574");
-        stringTwo.add("10.98");
-        stringTwo.add("-20.45");
-        stringTwo.add("30.223");
-        List<List<String>> cubesOne = new ArrayList<>();
-        cubesOne.add(stringOne);
-        cubesOne.add(stringTwo);
-        List<List<String>> cubesTwo = new ArrayList<>();
-        cubesTwo.add(stringTwo);
-        cubesTwo.add(stringOne);
+        List<Double> doubleOne = new ArrayList<>();
+        doubleOne.add(5.);
+        doubleOne.add(10.);
+        doubleOne.add(20.);
+        doubleOne.add(30.);
+        List<Double> doubleTwo = new ArrayList<>();
+        doubleTwo.add(77.574);
+        doubleTwo.add(10.98);
+        doubleTwo.add(-20.45);
+        doubleTwo.add(30.223);
+        List<List<Double>> cubesOne = new ArrayList<>();
+        cubesOne.add(doubleOne);
+        cubesOne.add(doubleTwo);
+        List<List<Double>> cubesTwo = new ArrayList<>();
+        cubesTwo.add(doubleTwo);
+        cubesTwo.add(doubleOne);
         return new Object[][]{
                 {stringsOne, cubesOne}, {stringsTwo, cubesTwo}
         };

@@ -7,9 +7,6 @@ public class Point {
     private double pointY;
     private double pointZ;
 
-    public Point() {
-    }
-
     public Point(Point point) {
         pointX = point.getPointX();
         pointY = point.getPointY();
@@ -77,4 +74,5 @@ public class Point {
                 .add("pointZ=" + pointZ)
                 .toString();
     }
+
 }

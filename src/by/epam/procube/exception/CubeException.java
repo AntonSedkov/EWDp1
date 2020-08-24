@@ -1,6 +1,7 @@
 package by.epam.procube.exception;
 
 public class CubeException extends Exception {
+
     public CubeException() {
         super();
     }
@@ -16,4 +17,5 @@ public class CubeException extends Exception {
     public CubeException(Throwable cause) {
         super(cause);
     }
+
 }

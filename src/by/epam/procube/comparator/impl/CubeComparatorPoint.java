@@ -4,6 +4,7 @@ import by.epam.procube.comparator.CubeComparator;
 import by.epam.procube.entity.Cube;
 
 public class CubeComparatorPoint implements CubeComparator {
+
     @Override
     public int compare(Cube cubeOne, Cube cubeTwo) {
         int result = Double.compare(cubeOne.getStartPoint().getPointX(), cubeTwo.getStartPoint().getPointX());
@@ -15,4 +16,5 @@ public class CubeComparatorPoint implements CubeComparator {
         }
         return result;
     }
+
 }

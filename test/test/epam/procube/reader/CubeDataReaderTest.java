@@ -52,4 +52,5 @@ public class CubeDataReaderTest {
     public void testReadLinesFileException() throws CubeException {
         List<String> actual = CubeDataReader.readLinesFile("src\\resources\\cubes.txt");
     }
+
 }

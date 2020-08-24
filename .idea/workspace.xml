@@ -2,38 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3dfd6e1-adc8-4cd9-8062-8f9593422f33" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/log4j-api-2.13.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/log4j-core-2.13.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/epam/procube/comparator/impl/CubeComparatorId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/by/epam/procube/specification/impl/ByIdSpecification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test/epam/procube/observer/impl/CubeObserverEdgeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test/epam/procube/observer/impl/CubeObserverPointTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/log4j_1_2_17.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test/epam/procube/comparator/impl/ComparatorDataProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test/epam/procube/comparator/impl/CubeComparatorEdgeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test/epam/procube/comparator/impl/CubeComparatorIdTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test/epam/procube/comparator/impl/CubeComparatorPointTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test/epam/procube/repository/CubeRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test/epam/procube/service/CubeServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test/epam/procube/specification/impl/BigSizeSpecificationImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test/epam/procube/specification/impl/ByIdSpecificationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test/epam/procube/specification/impl/MediumSizeSpecificationImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test/epam/procube/specification/impl/NegativeLayoutSpecificationImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test/epam/procube/specification/impl/PositiveLayoutSpecificationImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test/epam/procube/specification/impl/SmallSizeSpecificationImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test/epam/procube/specification/impl/SpecificationDataProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EWDp1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/EWDp1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/log4j-1.2.17.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/cubes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/cubes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/epam/procube/creator/CubeDataCreator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/epam/procube/comparator/CubeComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/comparator/CubeComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/epam/procube/comparator/impl/CubeComparatorEdge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/comparator/impl/CubeComparatorEdge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/epam/procube/comparator/impl/CubeComparatorId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/comparator/impl/CubeComparatorId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/epam/procube/comparator/impl/CubeComparatorPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/comparator/impl/CubeComparatorPoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/by/epam/procube/entity/Cube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/entity/Cube.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/by/epam/procube/entity/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/entity/Point.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/by/epam/procube/entity/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/entity/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/epam/procube/entity/ShapeWarehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/warehouse/ShapeWarehouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/epam/procube/exception/CubeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/exception/CubeException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/by/epam/procube/factory/AbstractShapeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/factory/AbstractShapeFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/by/epam/procube/factory/CubeFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/factory/CubeFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/epam/procube/observer/CubeEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/observer/CubeEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/epam/procube/observer/Observable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/observer/Observable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/epam/procube/observer/Observer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/observer/Observer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/by/epam/procube/observer/impl/CubeObserverEdge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/observer/impl/CubeObserverEdge.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/by/epam/procube/observer/impl/CubeObserverPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/observer/impl/CubeObserverPoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/by/epam/procube/parser/CubeDataParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/parser/CubeDataParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/epam/procube/reader/CubeDataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/reader/CubeDataReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/by/epam/procube/repository/CubeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/repository/CubeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/epam/procube/service/ShapeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/service/ShapeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/by/epam/procube/service/impl/CubeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/service/impl/CubeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/epam/procube/validator/ShapeValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/by/epam/procube/warehouse/ShapeWarehouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/entity/ShapeWarehouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/log4j.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/epam/procube/specification/impl/BigSizeSpecificationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/specification/impl/BigSizeSpecificationImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/epam/procube/specification/impl/ByIdSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/specification/impl/ByIdSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/epam/procube/specification/impl/MediumSizeSpecificationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/specification/impl/MediumSizeSpecificationImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/epam/procube/specification/impl/NegativeLayoutSpecificationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/specification/impl/NegativeLayoutSpecificationImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/epam/procube/specification/impl/PositiveLayoutSpecificationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/specification/impl/PositiveLayoutSpecificationImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/by/epam/procube/specification/impl/SmallSizeSpecificationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/by/epam/procube/specification/impl/SmallSizeSpecificationImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test/epam/procube/factory/CubeFactoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/epam/procube/factory/CubeFactoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test/epam/procube/observer/impl/CubeObserverEdgeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/epam/procube/observer/impl/CubeObserverEdgeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test/epam/procube/observer/impl/CubeObserverPointTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/epam/procube/observer/impl/CubeObserverPointTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test/epam/procube/parser/CubeDataParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/epam/procube/parser/CubeDataParserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test/epam/procube/reader/CubeDataReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/epam/procube/reader/CubeDataReaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test/epam/procube/util/IdGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/epam/procube/util/IdGeneratorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test/epam/procube/validator/IncomingDataValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/test/epam/procube/validator/IncomingDataValidatorTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,8 +75,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="TestNG Test Class" />
         <option value="Class" />
+        <option value="TestNG Test Class" />
       </list>
     </option>
   </component>
@@ -86,11 +102,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="test.epam.procube.service" />
+      <recent name="test.epam.procube.specification.impl" />
+      <recent name="test.epam.procube.repository" />
+      <recent name="test.epam.procube.comparator.impl" />
       <recent name="test.epam.procube.observer.impl" />
-      <recent name="test.epam.procube.parser" />
-      <recent name="test.epam.procube.validator" />
-      <recent name="test.epam.procube.reader" />
-      <recent name="test.epam.procube.factory" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -108,52 +124,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.CubeDataParserTest">
-    <configuration name="CubeDataParserTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.&lt;default&gt;">
+    <configuration name="CubeServiceImplTest.testCalculateFacetDiagonal" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="EWDp1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.epam.procube.parser.*" />
+          <option name="PATTERN" value="test.epam.procube.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test.epam.procube.parser" />
-      <option name="MAIN_CLASS_NAME" value="test.epam.procube.parser.CubeDataParserTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CubeDataReaderTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="EWDp1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.epam.procube.reader.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.epam.procube.reader" />
-      <option name="MAIN_CLASS_NAME" value="test.epam.procube.reader.CubeDataReaderTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CubeDataReaderTest.testReadLinesFile" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="EWDp1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.epam.procube.reader.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.epam.procube.reader" />
-      <option name="MAIN_CLASS_NAME" value="test.epam.procube.reader.CubeDataReaderTest" />
-      <option name="METHOD_NAME" value="testReadLinesFile" />
+      <option name="PACKAGE_NAME" value="test.epam.procube.service" />
+      <option name="MAIN_CLASS_NAME" value="test.epam.procube.service.CubeServiceImplTest" />
+      <option name="METHOD_NAME" value="testCalculateFacetDiagonal" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -161,35 +143,64 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CubeFactoryTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CubeServiceImplTest.testCalculateFacetDiagonalNull" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="EWDp1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.epam.procube.factory.*" />
+          <option name="PATTERN" value="test.epam.procube.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test.epam.procube.factory" />
-      <option name="MAIN_CLASS_NAME" value="test.epam.procube.factory.CubeFactoryTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PACKAGE_NAME" value="test.epam.procube.service" />
+      <option name="MAIN_CLASS_NAME" value="test.epam.procube.service.CubeServiceImplTest" />
+      <option name="METHOD_NAME" value="testCalculateFacetDiagonalNull" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CubeFactoryTest.testCreateAllCubes" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CubeServiceImplTest.testCalculateVertexPoints" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="EWDp1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.epam.procube.factory.*" />
+          <option name="PATTERN" value="test.epam.procube.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="test.epam.procube.factory" />
-      <option name="MAIN_CLASS_NAME" value="test.epam.procube.factory.CubeFactoryTest" />
-      <option name="METHOD_NAME" value="testCreateAllCubes" />
+      <option name="PACKAGE_NAME" value="test.epam.procube.service" />
+      <option name="MAIN_CLASS_NAME" value="test.epam.procube.service.CubeServiceImplTest" />
+      <option name="METHOD_NAME" value="testCalculateVertexPoints" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CubeServiceImplTest.testCalculateVertexPointsNull" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="EWDp1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.epam.procube.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.epam.procube.service" />
+      <option name="MAIN_CLASS_NAME" value="test.epam.procube.service.CubeServiceImplTest" />
+      <option name="METHOD_NAME" value="testCalculateVertexPointsNull" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="&lt;default&gt;" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="EWDp1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
       <properties />
       <listeners />
       <method v="2">
@@ -198,11 +209,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CubeDataParserTest" />
-        <item itemvalue="TestNG.CubeDataReaderTest" />
-        <item itemvalue="TestNG.CubeDataReaderTest.testReadLinesFile" />
-        <item itemvalue="TestNG.CubeFactoryTest" />
-        <item itemvalue="TestNG.CubeFactoryTest.testCreateAllCubes" />
+        <item itemvalue="TestNG.&lt;default&gt;" />
+        <item itemvalue="TestNG.CubeServiceImplTest.testCalculateVertexPointsNull" />
+        <item itemvalue="TestNG.CubeServiceImplTest.testCalculateVertexPoints" />
+        <item itemvalue="TestNG.CubeServiceImplTest.testCalculateFacetDiagonalNull" />
+        <item itemvalue="TestNG.CubeServiceImplTest.testCalculateFacetDiagonal" />
       </list>
     </recent_temporary>
   </component>
@@ -218,7 +229,8 @@
       <updated>1596985031597</updated>
       <workItem from="1596985036064" duration="22919000" />
       <workItem from="1597253674830" duration="5649000" />
-      <workItem from="1597506369927" duration="45132000" />
+      <workItem from="1597506369927" duration="48201000" />
+      <workItem from="1598178531304" duration="23184000" />
     </task>
     <servers />
   </component>
@@ -230,77 +242,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/by/epam/procube/service/impl/CubeServiceImpl.java</url>
-          <line>78</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/by/epam/procube/service/impl/CubeServiceImpl.java</url>
-          <line>114</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/by/epam/procube/service/impl/CubeServiceImpl.java</url>
-          <line>106</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/by/epam/procube/service/impl/CubeServiceImpl.java</url>
-          <line>96</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/by/epam/procube/service/impl/CubeServiceImpl.java</url>
-          <line>87</line>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/by/epam/procube/service/impl/CubeServiceImpl.java</url>
-          <line>74</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/by/epam/procube/service/impl/CubeServiceImpl.java</url>
-          <line>75</line>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/by/epam/procube/service/impl/CubeServiceImpl.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/by/epam/procube/service/impl/CubeServiceImpl.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/by/epam/procube/service/impl/CubeServiceImpl.java</url>
-          <line>80</line>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/by/epam/procube/service/impl/CubeServiceImpl.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/by/epam/procube/service/impl/CubeServiceImpl.java</url>
-          <line>76</line>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="TestNG">
         <watch expression="vertexes" language="JAVA" />

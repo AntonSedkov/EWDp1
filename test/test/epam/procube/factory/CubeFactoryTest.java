@@ -14,9 +14,9 @@ import static org.testng.Assert.assertEquals;
 
 public class CubeFactoryTest {
     CubeFactory cubeFactory = new CubeFactory();
-    List<String> cubeOne;
-    List<String> cubeTwo;
-    List<List<String>> cubesString;
+    List<Double> cubeOne;
+    List<Double> cubeTwo;
+    List<List<Double>> cubesString;
     Cube expectedOne;
     Cube expectedTwo;
     List<Cube> cubes;
@@ -25,15 +25,15 @@ public class CubeFactoryTest {
     public void setUp() {
         IdGenerator.setId(0);
         cubeOne = new ArrayList<>();
-        cubeOne.add("10");
-        cubeOne.add("20");
-        cubeOne.add("-50");
-        cubeOne.add("100");
+        cubeOne.add(10.);
+        cubeOne.add(20.);
+        cubeOne.add(-50.);
+        cubeOne.add(100.);
         cubeTwo = new ArrayList<>();
-        cubeTwo.add("25");
-        cubeTwo.add("-120");
-        cubeTwo.add("-68");
-        cubeTwo.add("333");
+        cubeTwo.add(25.);
+        cubeTwo.add(-120.);
+        cubeTwo.add(-68.);
+        cubeTwo.add(333.);
         cubesString = new ArrayList<>();
         cubesString.add(cubeOne);
         cubesString.add(cubeTwo);
